@@ -157,5 +157,9 @@ the app to be more lambda friendly or simply using a different lambda handler al
 
 Alternatively, another pseudo free tier solution is using ECS. Autoscaling is builtin ECS. ECS is an AWS only product.
 
+The application currently only runs on port 443 as opposed to the desired port 80.  The root path is also not accessible unless a custom domain 
+is used with API Gateway.  Port 80 can be rectify by using api gateway v2, but custom domains appears to be a must.  A load balancer
+can also be used instead of API Gateway with Lambda functions, but the free tier limit is 750 hours per month.
+
 [^1]: [<span style="color:blue"> Original Source </span>](https://github.com/nodejs/examples/tree/main/servers/express/api-with-express-and-handlebars)
 
